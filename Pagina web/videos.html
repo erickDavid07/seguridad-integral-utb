@@ -1,0 +1,579 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Videos</title>
+</head>
+
+<script>
+function vermas1(id){
+if(id=="mas1"){
+document.getElementById("desplegar1").style.display="block";   
+document.getElementById("mas1").style.display="none"; 
+}
+else{
+document.getElementById("desplegar1").style.display="none";
+document.getElementById("mas1").style.display="inline";
+}
+}
+</script>
+
+<script>
+function vermas2(id){
+if(id=="mas2"){
+document.getElementById("desplegar2").style.display="block";   
+document.getElementById("mas2").style.display="none"; 
+}
+else{
+document.getElementById("desplegar2").style.display="none";
+document.getElementById("mas2").style.display="inline";
+}
+}
+</script>
+
+<script>
+function vermas3(id){
+if(id=="mas3"){
+document.getElementById("desplegar3").style.display="block";   
+document.getElementById("mas3").style.display="none"; 
+}
+else{
+document.getElementById("desplegar3").style.display="none";
+document.getElementById("mas3").style.display="inline";
+}
+}
+</script>
+
+<script>
+function vermas4(id){
+if(id=="mas4"){
+document.getElementById("desplegar4").style.display="block";   
+document.getElementById("mas4").style.display="none"; 
+}
+else{
+document.getElementById("desplegar4").style.display="none";
+document.getElementById("mas4").style.display="inline";
+}
+}
+</script>
+
+<script>
+function vermas5(id){
+if(id=="mas5"){
+document.getElementById("desplegar5").style.display="block";   
+document.getElementById("mas5").style.display="none"; 
+}
+else{
+document.getElementById("desplegar5").style.display="none";
+document.getElementById("mas5").style.display="inline";
+}
+}
+</script>
+
+<script>
+function vermas6(id){
+if(id=="mas6"){
+document.getElementById("desplegar6").style.display="block";   
+document.getElementById("mas6").style.display="none"; 
+}
+else{
+document.getElementById("desplegar6").style.display="none";
+document.getElementById("mas6").style.display="inline";
+}
+}
+</script>
+
+<script>
+function vermas7(id){
+if(id=="mas7"){
+document.getElementById("desplegar7").style.display="block";   
+document.getElementById("mas7").style.display="none"; 
+}
+else{
+document.getElementById("desplegar7").style.display="none";
+document.getElementById("mas7").style.display="inline";
+}
+}
+</script>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Calibri;
+}
+
+body{
+    background-color: #f0f0f0;
+}
+
+/*ENCABEZADO Y MENU*/
+header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #009D2D;
+    z-index: 1;
+}
+
+hr{
+    border-color: #03CA3C;
+
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a.ver{
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #009D2D;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+a.ver: hover{
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+}
+
+a.botoncito{
+    background-color: #009D2D;
+    padding: 13px;
+    font-size: 13px;
+    border-radius: 30px;
+}
+
+a.botoncito: hover{
+    background-color: #3C3D3C;
+    color: white;
+}
+
+/*HEADER SUPERIOR*/
+.header_superior{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+img.logoutb{
+    display: flex;
+    position: relative;
+}
+
+/*BARRA MENU*/
+.container_menu{
+    width: 100%;
+    height: 70px;
+    background: #009D2D;
+    padding: 0px 20px;
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+
+nav ul li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 28px;
+    color: white;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 14px;
+    transition: all 300ms ease;
+    border-radius: 10px;
+}
+
+#check_menu {
+    display: none;
+}
+
+/*TRANSICIONES DE MENU*/
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background:#ECECEC;
+    color: #009D2D;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*CUERPO DE LA PAGINA*/
+main{
+    background: #f0f0f0;
+    padding: 70px 300px;
+    margin-top: 80px;
+}
+
+article{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 40px;
+    background: #F6FEF6;
+    border-radius: 20px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+article.seccionuno{
+    max-width: 100%;
+    margin: 20px;
+    padding: 40px;
+    background: #F6FEF6;
+    border-radius: 20px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+article h2{
+    font-family: sans-serif;
+}
+
+article p{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: sans-serif;
+    line-height: 30px;
+}
+    
+h2{
+    font-size: 30px;
+    font-family: calibri;
+    padding: 10px;
+    font-weight: 400;
+    line-height: 38px;
+    color: #444444;
+}
+
+p{
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 0rem;
+    line-height: 1.7;
+    color: #393939;
+    text-align: justify;
+    font-display: inherit;
+    font-family: calibri;
+}
+
+.secciones-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+p.info{
+    color: white;
+}
+
+p.infoUTB{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 25px;
+}
+
+.video {
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  border-radius: 25px;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+h1{
+    font-size: 40px;
+    font-family: calibri light;
+    color: #3D3D3D;
+}
+
+i{
+    font-size: 20px;
+    font-family: calibri;
+    color: #3D3D3D;
+}
+
+/*MENU RESPONSIVE*/
+
+@media screen and (max-width: 760px) {
+    .icon_menu {
+        font-size: 26px;
+        color: white;
+        cursor: pointer;
+        display: none;
+        width: 26px;
+        height: 100%;
+        align-items: center;
+    }
+
+    header{
+        padding: 15px 20px;
+    }
+
+    #check_menu {
+        display: none;
+    }
+
+    ul {
+        flex-direction: column;
+        background-color: #009D2D;
+        position: fixed;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 0;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+    #check_menu:checked ~ ul {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        margin-top: 15px;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #label_check{
+        width: 26px;
+        height: 100%;
+        display: none;
+    }
+
+    .secciones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+    .header_superior{
+            padding: 10px;
+        }
+
+        .logo img{
+            height: 60px;
+        }
+
+        
+        nav > ul > li > a:hover{
+            transform: scale(1); /*escaladelmenu*/
+        }
+
+        nav ul li ul{
+            left: 70px; /*submenuposicion*/
+        }
+
+        nav > ul > li:hover ul{
+            top: 60px;
+        }
+
+        nav > ul > li:first-child a{
+            background-position: 20px;
+        }
+
+        #selected{
+            transform: scale(1);
+        }
+
+        #label_check{
+            display: block;
+        }
+
+        .icon_menu{
+            display: flex;
+        }
+
+        #check_menu:checked ~ nav > ul{
+            height: 300px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        main{
+            padding: 60px 30px;
+        }
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    #menu-toggle:checked + #menu-icon + ul {
+        display: flex;
+    }
+}
+</style>
+
+<body>
+    <header>
+        <div class="logo"><a href="https://utb.edu.ec/"><img src="https://i.ibb.co/ZGRFTHf/Logo-Blanco-UTB-removebg-preview.png" height="70px" class="logoutb"></a></div>
+        <nav>
+            <input type="checkbox" id="check_menu" name="menu-toggle">
+            <label for="check_menu" class="icon_menu">&#9776;</label>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="">Videos</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="cuentos.html">Cuentos</a></li>
+                <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="logo"><a href="#"><img src="https://i.ibb.co/b2FFMDy/Whats-App-Image-2024-06-19-at-11-13-10-removebg-preview.png" height="70px" class="logoutb"></a></div>
+    </header>
+
+    <main>
+        <center><h1>Videos sobre Seguridad</h1><br><i>Aprender en formato audiovisual</i></center><br><br><hr><br><br><br>
+        <div class="container">
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tIAzPgT0uNQ?si=V31tU4HVkMrhPT6I" frameborder="0" allowfullscreen></iframe>
+        <h2>Seguridad vial | Universidad Tecnica de Babahoyo</h2>
+        <center><button onclick="vermas1('mas1');" id="mas1"><b>Descripcion del video</b></button></center>
+        <p id="desplegar1" style="display:none;">Este video educativo enseña a los niños de educación inicial los principios básicos de la seguridad vial. A través de divertidas animaciones y ejemplos prácticos, los pequeños aprenderán la importancia de usar el cinturón de seguridad, cruzar la calle con precaución, y seguir las señales de tráfico, garantizando su seguridad en el camino.
+            <button onclick="vermas1('menos1');" id="menos1">leer menos</button><br><br></p>
+      </div><br><br><br><br>
+
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XfvewM8MHhc?si=RS9gk3EJsPnBVfqb" frameborder="0" allowfullscreen></iframe>
+        <h2>Seguridad en casa | Universidad Tecnica de Babahoyo</h2>
+        <center><button onclick="vermas2('mas2');" id="mas2"><b>Descripcion del video</b></button></center>
+        <p id="desplegar2" style="display:none;">Este video educativo para niños de educación inicial muestra cómo mantenerse seguros en casa. A través de historias y personajes amigables, los niños aprenderán a reconocer y evitar peligros como objetos afilados, enchufes eléctricos, y productos tóxicos, promoviendo un ambiente hogareño seguro y protegido.
+            <button onclick="vermas2('menos2');" id="menos2">leer menos</button><br><br></p>
+      </div><br><br><br><br>
+
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SFhTa1ZYgEA?si=cDt8EHUts-n0f1o3" frameborder="0" allowfullscreen></iframe>
+        <h2>Seguridad escolar | Universidad Tecnica de Babahoyo</h2>
+        <center><button onclick="vermas3('mas3');" id="mas3"><b>Descripcion del video</b></button></center>
+        <p id="desplegar3" style="display:none;">Este video educativo para niños de educación inicial destaca la importancia de la seguridad escolar. Mediante personajes y situaciones cotidianas, los niños aprenderán reglas básicas como no correr en los pasillos, usar adecuadamente los equipos del patio de recreo, y seguir instrucciones de los maestros para mantenerse seguros en la escuela.
+            <button onclick="vermas3('menos3');" id="menos3">leer menos</button><br><br></p>
+      </div><br><br><br><br>
+
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/l9JiWESMoM8?si=R0-FAfexPAKTtDTR" frameborder="0" allowfullscreen></iframe>
+        <h2>Seguridad en linea | Universidad Tecnica de Babahoyo</h2>
+        <center><button onclick="vermas6('mas6');" id="mas6"><b>Descripcion del video</b></button></center>
+        <p id="desplegar6" style="display:none;">Descubre un mundo de aprendizaje divertido desde casa en este animado video educativo para niños pequeños. Explora cómo se puede aprender y jugar en línea de manera segura y emocionante. Únete a personajes encantadores mientras descubren canciones, juegos y actividades educativas en un ambiente digital colorido y amigable. ¡Ideal para inspirar curiosidad y creatividad desde la comodidad del hogar!
+            <button onclick="vermas6('menos6');" id="menos6">leer menos</button><br><br></p>
+      </div><br><br><br><br>
+
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dzHuT99WOpI?si=awJ5KhKjSU8TIUQc" frameborder="0" allowfullscreen></iframe>
+        <h2>Seguridad en caso de emergencias | Universidad Tecnica de Babahoyo</h2>
+        <center><button onclick="vermas7('mas7');" id="mas7"><b>Descripcion del video</b></button></center>
+        <p id="desplegar7" style="display:none;">Descubre cómo estar preparado para emergencias con este video educativo. Aprende consejos prácticos y seguros para situaciones de crisis, desde incendios hasta terremotos. Perfecto para enseñar a niños y familias cómo actuar con calma y seguridad en momentos difíciles. ¡No te pierdas estos simples pasos que pueden hacer una gran diferencia en situaciones de emergencia!
+            <button onclick="vermas7('menos7');" id="menos7">leer menos</button><br><br></p>
+      </div><br><br><br><br>
+
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-Na0FAp4XjM?si=i3Nw-_J84hJHHv4V" frameborder="0" allowfullscreen></iframe>
+        <h2>Seguridad emocional | Universidad Tecnica de Babahoyo</h2>
+        <center><button onclick="vermas4('mas4');" id="mas4"><b>Descripcion del video</b></button></center>
+        <p id="desplegar4" style="display:none;">En esta historia para niños de educación inicial, se exploran conceptos fundamentales de la seguridad emocional. Los niños aprenderán a identificar y expresar sus sentimientos, reconocer cuándo necesitan ayuda y cómo practicar la empatía y el respeto hacia los demás, fomentando un ambiente emocionalmente seguro y saludable.
+            <button onclick="vermas4('menos4');" id="menos4">leer menos</button><br><br></p>
+      </div><br><br><br><br>
+
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dCw1z58kerQ?si=BvUrj4dWwpeBUnnh" frameborder="0" allowfullscreen></iframe>
+        <h2>Seguridad social | Universidad Tecnica de Babahoyo</h2>
+        <center><button onclick="vermas5('mas5');" id="mas5"><b>Descripcion del video</b></button></center>
+        <p id="desplegar5" style="display:none;">Este vídeo corto explora la seguridad social para niños pequeños. Con ejemplos concretos, enseña la importancia de compartir, ser amable y respetar a los demás, promoviendo relaciones seguras y positivas en la comunidad.
+            <button onclick="vermas5('menos5');" id="menos5">leer menos</button><br><br></p>
+      </div><br><br><br><br>
+
+    </main>
+
+    <footer style="background-color: #333; color: white; padding: 20px;">
+        <div style="max-width: 1200px; margin: auto; text-align: center;">
+            <div style="margin-bottom: 20px;">
+                <img src="https://i.ibb.co/ZGRFTHf/Logo-Blanco-UTB-removebg-preview.png" height="100px" alt="Logo UTB" style="margin: 30px 10px 0px 0px;">
+            </div>
+
+            <center><div>
+                <center><p class="infoUTB"><b>UNIVERSIDAD TECNICA DE BABAHOYO</b><br>Babahoyo - Ecuador<br>Teléfono: (05) 257-0368<br>Email: soporte@utb.edu.ec</p></center>
+            </div>
+        </div></center>
+
+        <div style="text-align: center; margin-top: 20px;">
+        &copy; Universidad Técnica de Babahoyo 2023 - 2024</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,770 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Inicio</title>
+</head>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Calibri;
+}
+
+body{
+    background-color: #f0f0f0;
+}
+
+/*ENCABEZADO Y MENU*/
+header {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #009D2D;
+    z-index: 1;
+}
+
+hr{
+    border-color: #03CA3C;
+
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a.ver{
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #009D2D;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+a.ver: hover{
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+}
+
+a.botoncito{
+    background-color: #009D2D;
+    padding: 13px;
+    font-size: 13px;
+    border-radius: 30px;
+    font-family: cursive;
+}
+
+a.botoncito: hover{
+    background-color: #3C3D3C;
+    color: white;
+}
+
+/*HEADER SUPERIOR*/
+.header_superior{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+img.logoutb{
+    display: flex;
+    position: relative;
+}
+
+/*BARRA MENU*/
+.container_menu{
+    width: 100%;
+    height: 70px;
+    background: #009D2D;
+    padding: 0px 20px;
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+
+nav ul li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 28px;
+    color: white;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 14px;
+    transition: all 300ms ease;
+    border-radius: 10px;
+}
+
+#check_menu {
+    display: none;
+}
+
+/*TRANSICIONES DE MENU*/
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background:#ECECEC;
+    color: #009D2D;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*CUERPO DE LA PAGINA*/
+main{
+    background: #f0f0f0;
+    padding: 40px 300px;
+    margin-top: -1px;
+    position: relative;
+}
+
+main.fondo1{
+    padding: 0px;
+    margin-top: -127px;
+}
+
+main.fondo{
+    background: url("https://i.ibb.co/XbKMM15/IMG-20231214-163821.jpg");
+    padding: 10px;
+    margin-top: 90px;
+    z-index: 1;
+}
+
+article{
+    max-width: 1200px;
+    margin: -10px -10px;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+article.seccionuno{
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 20px;
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+article h2{
+    font-family: sans-serif;
+}
+
+article p{
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: sans-serif;
+    line-height: 30px;
+}
+
+article.imagenuno{
+    background-color: #1DA230;
+    max-width: 100%;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 0px;
+    z-index: -1;
+}
+    
+h2{
+    font-size: 30px;
+    font-family: Times new roman;
+    padding: 1px;
+    font-weight: 400;
+    line-height: 38px;
+    color: #444444;
+}
+
+h2.subtitulo{
+    font-size: 22px;
+    padding: 10px;
+    font-weight: 400;
+    line-height: 38px;
+    color: #444444;
+    font-family: cursive;
+}
+
+h2.tituliloo{
+    font-size: 15px;
+    font-family: calibri;
+    color: white;
+}
+
+p{
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 0rem;
+    line-height: 1.7;
+    color: #393939;
+    text-align: justify;
+    font-display: inherit;
+    font-family: times new roman;
+}
+
+p.descripcion{
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.secciones-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.secciones-container1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.seccion {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+p.info{
+    color: white;
+}
+
+p.infoUTB{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 25px;
+}
+
+.galeria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  position: relative;
+}
+
+.contenedor-flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.titulillo {
+  position: absolute;
+  top: 85%;
+  transform: translateY(-50%);
+}
+
+.flecha-izquierda {
+  left: 20px;
+  z-index: 1;
+}
+
+.flecha-derecha {
+  right: 20px;
+}
+
+.flecha {
+  background: #009D2D;
+  border: none;
+  border-radius: 100%;
+  padding: 10px;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.contenedor-imagenes {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  margin: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.galeria img {
+  width: calc(33.33% - 10px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.galeria img:hover {
+  transform: scale(1.1);
+}
+
+img.imagenes1{
+    border-radius: 10px;
+}
+
+
+/*MENU RESPONSIVE*/
+
+@media screen and (max-width: 760px) {
+    .icon_menu {
+        font-size: 26px;
+        color: white;
+        cursor: pointer;
+        display: none;
+        width: 26px;
+        height: 100%;
+        align-items: center;
+    }
+
+    header{
+        padding: 15px 20px;
+    }
+
+    #check_menu {
+        display: none;
+    }
+
+    ul {
+        flex-direction: column;
+        background-color: #009D2D;
+        position: fixed;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 0;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+    #check_menu:checked ~ ul {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        margin-top: 15px;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #label_check{
+        width: 26px;
+        height: 100%;
+        display: none;
+    }
+
+    .secciones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flecha {
+  background: #009D2D;
+  border: none;
+  border-radius: 100%;
+  padding: 5px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.titulillo {
+  position: absolute;
+  top: 80%;
+  transform: translateY(-50%);
+}
+
+.seccion {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+    .header_superior{
+            padding: 10px;
+        }
+
+        .logo img{
+            height: 60px;
+        }
+        
+        nav > ul > li > a:hover{
+            transform: scale(1); /*escaladelmenu*/
+        }
+
+        nav ul li ul{
+            left: 70px;
+        }
+
+        nav > ul > li:hover ul{
+            top: 60px;
+        }
+
+        nav > ul > li:first-child a{
+            background-position: 20px;
+        }
+
+        #selected{
+            transform: scale(1);
+        }
+
+        #label_check{
+            display: block;
+        }
+
+        .icon_menu{
+            display: flex;
+        }
+
+        #check_menu:checked ~ nav > ul{
+            height: 300px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        main{
+            padding: 10px;
+        }
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    #menu-toggle:checked + #menu-icon + ul {
+        display: flex;
+    }
+
+    article a img.imagenunoo{
+        margin-top: 10px;
+        height: 80px;
+    }
+
+    img.inicio{
+        width: 100%;
+        padding: 2px;
+        border-radius: 20px;
+    }
+}
+</style>
+
+<body>
+    <header>
+        <div class="logo"><a href="https://utb.edu.ec/"><img src="https://i.ibb.co/ZGRFTHf/Logo-Blanco-UTB-removebg-preview.png" height="70px" class="logoutb"></a></div>
+        <nav>
+            <input type="checkbox" id="check_menu" name="menu-toggle">
+            <label for="check_menu" class="icon_menu">&#9776;</label>
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="cuentos.html">Cuentos</a></li>
+                <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="logo"><a href="https://utb.edu.ec/"><img src="https://i.ibb.co/b2FFMDy/Whats-App-Image-2024-06-19-at-11-13-10-removebg-preview.png" height="70px" class="logoutb"></a></div>
+    </header>
+
+    <main class="fondo">
+        <div class="banner">
+            <center><img src="https://i.ibb.co/JQRy5Ct/IMG-20231214-163335-removebg-preview.png" alt="IMG-20231214-163335-removebg-preview" style="margin-top: -1px"; height="150px"></center>
+        </div>
+    </main><br><br>
+
+    <main class="fondo1">
+        <div class="imagenuno1">
+        <article class="imagenuno">
+            <a href="juegos.html" class="imagenunoo"><center><img src="https://i.ibb.co/kDYs0GP/IMG-20231214-113933.jpg" alt="IMG-20231214-113933" style="margin-top: 95px; height: 80px; width: 350px; border-radius: 30px;"></center></a>
+        </article>
+    </div>
+    </main>
+
+    <main>
+        <article class="seccionuno">
+            <center><h2>Seguridad integral</h2></center><br><hr><br>
+            <!--<img src="https://img.freepik.com/fotos-premium/ninos-jugando-bosque-dibujos-animados-bosque-ninos-paraiso-fondo-pantalla-ilustracion-fondo_912113-226872.jpg" alt="Imagen de Seguridad en Acción" class="inicio">-->
+        </article>
+
+        <div class="galeria">
+  <div class="contenedor-flecha flecha-izquierda">
+    <button id="anterior" class="flecha">&nbsp<&nbsp</button>
+  </div>
+  <div class="titulillo">
+        <h2 class="tituliloo"><strong>Imagenes  sobre la seguridad | Universidad Tecnica de Babahoyo</strong></h2>
+  </div>
+  <div class="contenedor-imagenes">
+    <img src="https://i.ibb.co/y0b0zbq/0d88a2d6-7274-412b-b5ab-0f0737c89e69.jpg" alt="Imagen 2">
+    <img src="https://img.freepik.com/fotos-premium/dibujos-animados-amigos-felices-fondo-cielo_978521-2558.jpg" alt="Imagen 2">
+    <img src="https://i.ibb.co/SwtyV7B/3bc60af8-477d-405d-bc51-cf8c605b382f.jpg" alt="Imagen 2">
+    <img src="https://i.ibb.co/3mDNSFV/45d2dc75-e3eb-4e9d-8f48-bc410cf582f2.jpg" alt="Imagen 2">
+    <img src="https://www.pasajero7.com/wp-content/uploads/2020/04/Lanzan-aplicaci%C3%B3n-de-seguridad-vial-para-ni%C3%B1os.jpg" alt="Imagen 2">
+    <img src="https://www.curriculumnacional.cl/614/articles-30883_thumbnail.jpg" alt="Imagen 2">
+    <img src="https://revistafactorrh.com/media/k2/items/cache/5d9106cd3b26b3ecac196958778c9f70_XL.jpg" alt="Imagen 2">
+    <img src="https://i.ibb.co/mXmqmwh/33dcd3e1-54f7-4ba7-b10c-1da9a2ff7ae6.jpg" alt="Imagen 2">
+    <img src="https://img.freepik.com/fotos-premium/regreso-escuela-ninos-elementos-dibujos-animados-resolucion-alta-calidad-4k_99297-24.jpg" alt="Imagen 2">
+    <img src="https://aesvi.es/wp-content/uploads/2021/05/cartoon-2898150_1920.png" alt="Imagen 2">
+  </div>
+  <div class="contenedor-flecha flecha-derecha">
+    <button id="siguiente" class="flecha">&nbsp>&nbsp</button>
+  </div>
+</div><br><br><br>
+
+<script type="text/javascript">
+  const contenedorImagenes = document.querySelector('.contenedor-imagenes');
+  const botonAnterior = document.getElementById('anterior');
+  const botonSiguiente = document.getElementById('siguiente');
+
+  botonAnterior.addEventListener('click', () => {
+    contenedorImagenes.scrollLeft -= contenedorImagenes.clientWidth;
+  });
+
+  botonSiguiente.addEventListener('click', () => {
+    contenedorImagenes.scrollLeft += contenedorImagenes.clientWidth;
+  });
+</script>
+
+        <article class="seccionuno">
+            <center><h2>Material didáctico digital</h2></center><br><hr><br>
+            <!--<img src="https://img.freepik.com/fotos-premium/ninos-jugando-bosque-dibujos-animados-bosque-ninos-paraiso-fondo-pantalla-ilustracion-fondo_912113-226872.jpg" alt="Imagen de Seguridad en Acción" class="inicio">-->
+        </article>
+        <div class="secciones-container">
+            <div class="seccion">
+                <article>
+                    <center><h2 class="subtitulo">Videos</h2></center><hr><br><br>
+                    <center><img src="https://i.ibb.co/4NvsdyF/461fb415-3079-4f38-9b1b-07c390a27352.jpg" alt="461fb415-3079-4f38-9b1b-07c390a27352" border="0" height="200px" class="imagenes1"></center><br>
+                    <center><a href="videos.html" class="botoncito">¡Ver videos!</a></center><br><br>
+                </article>
+            </div>
+
+            <div class="seccion">
+                <article>
+                    <center><h2 class="subtitulo">Juegos</h2></center><hr><br><br>
+                    <center><img src="https://i.ibb.co/99vdtrr/eee.png" alt="eee" border="0" height="200px" class="imagenes1"></center><br>
+                    <center><a href="juegos.html" class="botoncito">¡Jugar!</a></center><br><br>
+                </article>
+            </div>
+
+            <div class="seccion">
+                <article>
+                    <center><h2 class="subtitulo">Cuentos</h2></center><hr><br><br>
+                    <center><img src="https://i.ibb.co/n6qRqhT/53b39fe5-c7a8-4305-9ac6-c00085159ad9.jpg" alt="53b39fe5-c7a8-4305-9ac6-c00085159ad9" border="0" height="200px" class="imagenes1"></center><br>
+                    <center><a href="cuentos.html" class="botoncito">¡Ver sitio web!</a></center><br>
+                </article>
+            </div>
+        </div>
+
+        <center><div id="semaforo">
+    <div id="red" class="light"></div>
+    <div id="yellow" class="light"></div>
+    <div id="green" class="light"></div>
+    <div id="message" class="cloud"></div>
+  </div></center>
+
+  <style>
+      #semaforo {
+      position: relative;
+      width: 300px;
+      height: 100px;
+      background-color: #333;
+      border-radius: 15px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      margin: 50px;
+    }
+    .light {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #999;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    #red { background-color: #ff6347; }
+    #yellow { background-color: #ffd700; }
+    #green { background-color: #32cd32; }
+    .cloud {
+      position: absolute;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      display: none;
+      font-size: 10px;
+    }
+    #message {
+      top: 50%;
+      left: -120px;
+      transform: translateY(-50%);
+    }
+  </style>
+
+  <script>
+    function changeLights() {
+      const redLight = document.getElementById('red');
+      const yellowLight = document.getElementById('yellow');
+      const greenLight = document.getElementById('green');
+      const messageDiv = document.getElementById('message');
+
+      setTimeout(() => {
+        redLight.style.backgroundColor = '#ff6347';
+        yellowLight.style.backgroundColor = '#999';
+        greenLight.style.backgroundColor = '#999';
+        showMessage("¡DETENTE!", messageDiv);
+        setTimeout(() => {
+          redLight.style.backgroundColor = '#999';
+          yellowLight.style.backgroundColor = '#ffd700';
+          greenLight.style.backgroundColor = '#999';
+          showMessage("¡PRECAUCION!", messageDiv);
+          setTimeout(() => {
+            redLight.style.backgroundColor = '#999';
+            yellowLight.style.backgroundColor = '#999';
+            greenLight.style.backgroundColor = '#32cd32';
+            showMessage("PUEDES PASAR", messageDiv);
+            setTimeout(() => {
+              messageDiv.style.display = 'none';
+              changeLights();
+            }, 2000);
+          }, 2000);
+        }, 2000);
+      }, 2000);
+    }
+
+    function showMessage(message, element) {
+      element.innerHTML = message;
+      element.style.display = 'block';
+    }
+
+    changeLights();
+  </script>
+
+        <div style="display: flex; justify-content: center;">
+  <div class="traffic-sign" onclick="showInfo('stop')">
+    <img src="https://static.vecteezy.com/system/resources/previews/013/281/356/original/stop-sign-icon-free-png.png" alt="Stop Sign">
+  </div>
+  <div class="traffic-sign" onclick="showInfo('crosswalk')">
+    <img src="https://images.vexels.com/media/users/3/163004/isolated/preview/ce4cb63d6ad47c7b1e41cc4b4611c1a9-plano-de-advertencia-de-rombo-peatonal-de-cruce.png" alt="Crosswalk Sign">
+  </div>
+  <div class="traffic-sign" onclick="showInfo('juego')">
+    <img src="https://images.vexels.com/media/users/3/163176/isolated/preview/34116d00c1ce10ef10369eed3c91841a-nino-nino-ninos-bola-zona-residencial-rombo-advertencia-plana.png" alt="juego Sign">
+  </div>
+</div>
+<!-- Agregar más señales aquí -->
+
+<div style="text-align: center;">
+  <div id="info-box" style="display: none;">
+    <h3>Información</h3>
+    <p id="sign-info"></p>
+  </div>
+</div>
+
+<style>
+  .traffic-sign {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  .traffic-sign img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+</style>
+
+  <script>
+    function showInfo(sign) {
+      const infoBox = document.getElementById('info-box');
+      const signInfo = document.getElementById('sign-info');
+
+      if (sign === 'stop') {
+        signInfo.textContent = "La señal de pare significa que debes detener completamente tu vehículo antes de continuar.";
+      } else if (sign === 'crosswalk') {
+        signInfo.textContent = "La señal de paso peatonal indica que debes ceder el paso a los peatones.";
+      }
+       if (sign === 'juego') {
+        signInfo.textContent = "La señal de zona de juego indica que en ese lugar hay espacios para jugar.";
+      }
+      // Agregar más condiciones para otras señales aquí
+
+      infoBox.style.display = 'block';
+    }
+  </script>
+
+    </main>
+
+    <footer style="background-color: #333; color: white; padding: 20px;">
+        <div style="max-width: 1200px; margin: auto; text-align: center;">
+            <div style="margin-bottom: 20px;">
+                <img src="https://i.ibb.co/ZGRFTHf/Logo-Blanco-UTB-removebg-preview.png" height="100px" alt="Logo UTB" style="margin: 30px 10px 0px 0px;">
+            </div>
+
+            <center><div>
+                <center><p class="infoUTB"><b>UNIVERSIDAD TECNICA DE BABAHOYO</b><br>Babahoyo - Ecuador<br>Teléfono: (05) 257-0368<br>Email: soporte@utb.edu.ec</p></center>
+            </div>
+        </div></center>
+
+        <div style="text-align: center; margin-top: 20px;">
+        &copy; Universidad Técnica de Babahoyo 2023 - 2024</div>
+</footer>
+</body>
+</html>

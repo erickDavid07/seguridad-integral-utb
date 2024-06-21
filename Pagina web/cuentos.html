@@ -1,0 +1,574 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cuentos</title>
+</head>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Calibri;
+}
+
+body{
+    background-color: #f0f0f0;
+}
+
+/*ENCABEZADO Y MENU*/
+header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #009D2D;
+    z-index: 1;
+}
+
+hr{
+    border-color: #03CA3C;
+
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a.ver{
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #009D2D;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+a.ver: hover{
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+}
+
+a.botoncito{
+    background-color: #009D2D;
+    padding: 13px;
+    font-size: 13px;
+    border-radius: 30px;
+}
+
+a.botoncito: hover{
+    background-color: #3C3D3C;
+    color: white;
+}
+
+/*HEADER SUPERIOR*/
+.header_superior{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+img.logoutb{
+    display: flex;
+    position: relative;
+}
+
+/*BARRA MENU*/
+.container_menu{
+    width: 100%;
+    height: 70px;
+    background: #009D2D;
+    padding: 0px 20px;
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+
+nav ul li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 28px;
+    color: white;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 14px;
+    transition: all 300ms ease;
+    border-radius: 10px;
+}
+
+#check_menu {
+    display: none;
+}
+
+/*TRANSICIONES DE MENU*/
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background:#ECECEC;
+    color: #009D2D;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*CUERPO DE LA PAGINA*/
+main{
+    background: #f0f0f0;
+    padding: 70px 300px;
+    margin-top: 80px;
+}
+
+article{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 40px;
+    background: #F6FEF6;
+    border-radius: 20px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+article.seccionuno{
+    max-width: 100%;
+    margin: 20px;
+    padding: 40px;
+    background: #F6FEF6;
+    border-radius: 20px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+article h2{
+    font-family: sans-serif;
+}
+
+article p{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: sans-serif;
+    line-height: 30px;
+}
+    
+h2{
+    font-size: 30px;
+    font-family: calibri;
+    padding: 10px;
+    font-weight: 400;
+    line-height: 38px;
+    color: #444444;
+}
+
+p{
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 0rem;
+    line-height: 1.7;
+    color: #393939;
+    text-align: justify;
+    font-display: inherit;
+    font-family: calibri;
+}
+
+.secciones-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+p.info{
+    color: white;
+}
+
+p.infoUTB{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 25px;
+}
+
+.video {
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  border-radius: 25px;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+h1{
+    font-size: 40px;
+    font-family: calibri light;
+    color: #3D3D3D;
+}
+
+i{
+    font-size: 20px;
+    font-family: calibri;
+    color: #3D3D3D;
+}
+
+/*MENU RESPONSIVE*/
+
+@media screen and (max-width: 760px) {
+    .icon_menu {
+        font-size: 26px;
+        color: white;
+        cursor: pointer;
+        display: none;
+        width: 26px;
+        height: 100%;
+        align-items: center;
+    }
+
+    header{
+        padding: 15px 20px;
+    }
+
+    #check_menu {
+        display: none;
+    }
+
+    ul {
+        flex-direction: column;
+        background-color: #009D2D;
+        position: fixed;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 0;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+    #check_menu:checked ~ ul {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        margin-top: 15px;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #label_check{
+        width: 26px;
+        height: 100%;
+        display: none;
+    }
+
+    .secciones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+    .header_superior{
+            padding: 10px;
+        }
+
+        .logo img{
+            height: 60px;
+        }
+
+        
+        nav > ul > li > a:hover{
+            transform: scale(1); /*escaladelmenu*/
+        }
+
+        nav ul li ul{
+            left: 70px; /*submenuposicion*/
+        }
+
+        nav > ul > li:hover ul{
+            top: 60px;
+        }
+
+        nav > ul > li:first-child a{
+            background-position: 20px;
+        }
+
+        #selected{
+            transform: scale(1);
+        }
+
+        #label_check{
+            display: block;
+        }
+
+        .icon_menu{
+            display: flex;
+        }
+
+        #check_menu:checked ~ nav > ul{
+            height: 300px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        main{
+            padding: 60px 30px;
+        }
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    #menu-toggle:checked + #menu-icon + ul {
+        display: flex;
+    }
+}
+</style>
+
+<body>
+    <header>
+        <div class="logo"><a href="https://utb.edu.ec/"><img src="https://i.ibb.co/ZGRFTHf/Logo-Blanco-UTB-removebg-preview.png" height="70px" class="logoutb"></a></div>
+        <nav>
+            <input type="checkbox" id="check_menu" name="menu-toggle">
+            <label for="check_menu" class="icon_menu">&#9776;</label>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="">Cuentos</a></li>
+                <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="logo"><a href=""><img src="https://i.ibb.co/b2FFMDy/Whats-App-Image-2024-06-19-at-11-13-10-removebg-preview.png" height="70px" class="logoutb"></a></div>
+    </header>
+
+    <main>
+        <article>
+            <h3>El Viaje de Dixi y Ana</h3>
+            <p>En un pequeño pueblo rodeado de montañas, vivían dos amigas, Dixi y Ana. Eran dos niñas curiosas y aventureras que siempre estaban dispuestas a explorar el mundo que las rodeaba. Un día, mientras jugaban en el jardín, descubrieron un pequeño coche rojo que había sido abandonado en un rincón del pueblo.<br><br>
+
+Dixi y Ana se miraron con ojos brillantes y decidieron que ese coche era el regalo perfecto para su próximo viaje. Después de limpiarlo y arreglarlo, subieron al asiento del conductor y pusieron el motor en marcha.<br><br>
+
+«¡Vámonos!» gritó Dixi, emocionada.<br>
+
+«¡Vámonos!» repitió Ana, riendo.<br><br>
+
+El coche comenzó a moverse, y las dos amigas se encontraron en un camino sinuoso que las llevó por los campos y bosques del pueblo. Mientras avanzaban, vieron a otros niños jugando en la calle, pero no les prestaron atención. Estaban demasiado ocupadas disfrutando de su aventura.<br><br>
+
+De repente, el coche se detuvo en un cruce. Dixi y Ana se miraron confundidas.<br><br>
+
+—¿Qué pasa? —preguntó Ana.<br><br>
+
+—No sé —respondió Dixi—. No hay señal de tráfico.<br><br>
+
+Justo en ese momento, un coche grande y negro se acercó a gran velocidad. Las dos amigas se asustaron y gritaron al mismo tiempo:<br><br>
+
+—¡Detente!<br><br>
+
+El conductor del coche negro, un anciano con gafas, se detuvo a tiempo y se acercó al coche de las niñas.<br><br>
+
+—¿Qué pasa, niñas? ¿Por qué gritaron? —preguntó con una sonrisa.<br><br>
+
+Dixi y Ana explicaron que no habían visto el tráfico y que no sabían qué hacer. El anciano les sonrió y les dijo:<br><br>
+
+—La seguridad vial es muy importante, niñas. Debe ser una de las primeras cosas que aprendan. ¿Saben qué es un semáforo?<br><br>
+
+Dixi y Ana se miraron confundidas.<br><br>
+
+—Es un señal que indica cuando podemos cruzar la calle —explicó el anciano.<br><br>
+
+—¡Ah, sí —dijeron las dos amigas al mismo tiempo.<br><br>
+
+—Exacto —dijo el anciano—. Y también hay señales de tráfico que indican qué dirección debe tomar un coche. Es importante seguir estas señales para evitar accidentes.<br><br>
+
+Dixi y Ana asintieron con la cabeza, emocionadas de aprender algo nuevo.<br><br>
+
+—¿Y qué pasa si no hay señales? —preguntó Ana.<br><br>
+
+—En ese caso, debemos ser muy cuidadosos —dijo el anciano—. Debemos mirar a ambos lados de la calle y esperar a que el tráfico sea seguro antes de cruzar.<br><br>
+
+Dixi y Ana se miraron y asintieron de nuevo.<br><br>
+
+—¡Entendido —dijeron al unísono.<br><br>
+
+El anciano sonrió y les dio un abrazo.<br><br>
+
+—Recuerden, niñas, que la seguridad vial es muy importante. Deben ser siempre conscientes de su entorno y seguir las reglas del tráfico.<br><br>
+
+Dixi y Ana se despidieron del anciano y continuaron su viaje. Desde ese día, siempre fueron muy cuidadosas al cruzar las calles y siempre recordaron las lecciones del anciano.<br><br>
+
+<b>Moral de la historia</b><br><br>
+
+La seguridad vial es muy importante para todos, especialmente para los niños. Es fundamental aprender a seguir las reglas del tráfico, como usar semáforos y señales, y ser conscientes de su entorno para evitar accidentes. Dixi y Ana aprendieron que la seguridad vial es una responsabilidad que todos debemos asumir para protegernos a nosotros mismos y a los demás.</p>
+        </div><br><br>
+
+        <div class="cuento">
+            <h3>El secreto de la escuela segura</h3>
+            <p>En un pequeño pueblo rodeado de verdes praderas y altas montañas, había una escuela muy especial llamada "Escuelita Arcoíris". En este lugar mágico, los niños aprendían no solo matemáticas y ciencias, sino también el valor de la amistad y la seguridad.<br><br>
+
+En una soleada mañana, la maestra Alexa llamó a sus alumnos al centro del patio. Los niños formaron un círculo alrededor de ella, curiosos por saber qué les tenía preparado esa mañana.<br><br>
+
+"¡Buenos días, chicos y chicas de la Escuelita Arcoíris!" saludó la maestra Alexa con una sonrisa brillante. "Hoy vamos a aprender sobre algo muy importante: cómo mantener nuestra escuela segura".<br><br>
+
+"¿Segura de qué, maestra?" preguntó curioso Juanito, el niño más travieso de todos.<br><br>
+
+"Segura de cualquier cosa que pueda hacernos daño, como los extraños que no conocemos o situaciones peligrosas", respondió la maestra Alexa con calma.<br><br>
+
+Los ojos de los niños se abrieron con atención mientras escuchaban atentamente.<br><br>
+
+"Para mantener nuestra escuela segura, todos debemos colaborar", continuó la maestra Alexa. "¿Alguna idea de cómo podemos hacerlo?". <br><br>
+
+"¡Podemos cerrar bien las puertas y no dejar que entren extraños!" exclamó Ana, levantando la mano.<br><br>
+
+"¡Exactamente, Ana!" dijo la maestra Luna, asintiendo con aprobación. "Cerrando bien las puertas y no dejando entrar a personas que no conocemos, estamos protegiendo nuestro hogar escolar".<br><br>
+
+Todos los niños asintieron con entusiasmo.<br><br>
+
+"¿Y qué más podemos hacer?" preguntó la maestra Alexa, mirando a sus alumnos.<br><br>
+
+"Podemos pedir ayuda a los adultos si vemos algo extraño", sugirió Marta, una niña muy responsable.<br><br>
+
+"¡Muy bien, Marta!" exclamó la maestra Alexa, orgullosa. "Si ven algo que les preocupe o les haga sentir incómodos, siempre pueden buscar a un adulto de confianza".<br><br>
+
+Después de aprender todas estas cosas importantes sobre la seguridad, los niños corrieron hacia sus salones con una nueva misión en mente: cuidar de su querida Escuelita Arcoíris.<br><br>
+
+Esa tarde, mientras jugaban en el patio, Juanito vio a alguien extraño merodeando por la cerca de la escuela. Recordando lo que la maestra Alexa les había enseñado, corrió a buscar a la directora Carmen.<br><br>
+
+"Directora Carmen, hay alguien extraño afuera", dijo Juanito con seriedad.<br><br>
+
+La directora Carmen siguió a Juanito al patio y rápidamente se aseguró de que todos los niños estuvieran a salvo. Llamaron a la policía, que llegó rápidamente y se llevó al extraño.<br><br>
+
+Esa noche, en la reunión de padres y maestros, la directora Carmen elogió a Juanito por ser valiente y estar atento, y a todos los niños por recordar lo que habían aprendido sobre la seguridad.<br><br>
+
+Desde entonces, la Escuelita Arcoíris se convirtió en un ejemplo de cómo la colaboración y el cuidado pueden mantener a todos seguros. Y los niños, orgullosos de su papel en mantener la seguridad de su escuela, sonreían cada vez que pensaban en el día en que descubrieron el secreto de la Escuela Segura.<br><br>
+
+<b>Mensaje del cuento</b><br><br>
+Trabajar juntos y estar atentos nos ayuda a mantener seguros nuestros hogares y escuelas.
+            </p>
+        </div><br><br>
+        <div class="cuento">
+            <h3>El misterio del Avatar desaparecido</h3>
+            <p>En un pueblo donde los ríos brillaban con reflejos de luz y los árboles susurraban secretos antiguos, vivían dos inseparables amigos: Miguel Estrella y Freddy Acosta. Miguel adoraba los libros de aventuras y Freddy era un genio de la tecnología.<br><br>
+
+Un día, mientras exploraban un nuevo juego en línea llamado "El Reino de las Estrellas", Freddy notó algo extraño: el avatar de Miguel había desaparecido misteriosamente del juego.<br><br>
+
+"¡Miguel, tu avatar ha desaparecido!" exclamó Freddy, mirando la pantalla con preocupación.<br><br>
+
+Miguel se acercó y frunció el ceño al ver que su personaje no estaba en la pantalla. "¿Qué ha pasado, Freddy? Estaba jugando hace un momento..."<br><br>
+
+Freddy rápidamente revisó las configuraciones y notó que alguien había entrado a la cuenta de Miguel y había cambiado la contraseña. "¡Oh no, alguien más ha tomado el control de tu cuenta, Miguel!"<br><br>
+
+Ambos chicos se sintieron confundidos y un poco asustados. Decidieron buscar ayuda y contactaron al hada digital Iris, la misma que habían conocido en su aventura anterior.<br><br>
+
+Iris apareció en la pantalla con una expresión preocupada. "Chicos, parece que han caído en una trampa de un hacker malintencionado. Es importante que aprendan a proteger sus cuentas en línea."<br><br>
+
+Con la guía de Iris, Miguel y Freddy comenzaron a investigar. Descubrieron que habían hecho clic en un enlace falso que los llevó a una página de inicio de sesión falsa. El hacker había aprovechado esto para obtener acceso a la cuenta de Miguel.<br><br>
+
+Con la ayuda de Iris, aprendieron a crear contraseñas más seguras y a no hacer clic en enlaces sospechosos. También comprendieron la importancia de tener cuidado con la información personal que compartían en línea.<br><br>
+
+Finalmente, después de varias horas de trabajo en equipo, lograron recuperar la cuenta de Miguel y restaurar su avatar en el juego.<br><br>
+
+"¡Lo logramos, Miguel!" exclamó Freddy, emocionado.<br><br>
+
+Miguel sonrió aliviado. "Gracias, Freddy. Y gracias a ti también, Iris. Aprendimos mucho hoy".<br><br>
+
+Iris sonrió y les recordó: "La seguridad en línea es como explorar un nuevo mundo. Es emocionante, pero debemos estar siempre atentos y cuidar nuestra información". <br><br>
+
+Desde ese día, Miguel y Freddy fueron más conscientes al navegar en internet. Siempre recordaban la valiosa lección que aprendieron gracias al misterio del avatar desaparecido y se aseguraban de compartir sus conocimientos con otros niños del pueblo.<br><br>
+
+<b>Mensaje del cuento</b><br><br>
+A veces, los problemas nos enseñan lecciones importantes. Con conocimiento y cuidado, podemos disfrutar del mundo digital de manera segura y responsable.</p>
+        </article><br><br>
+
+        <!--<h1>INTEGRANTES</h1>
+
+        <article>
+            <h2>Máster Gladys Guevara Albán</h2>
+            <p>Descripcion... y foto</p>
+        </article>-->
+
+    </main>
+
+    <footer style="background-color: #333; color: white; padding: 20px;">
+        <div style="max-width: 1200px; margin: auto; text-align: center;">
+            <div style="margin-bottom: 20px;">
+                <img src="https://i.ibb.co/ZGRFTHf/Logo-Blanco-UTB-removebg-preview.png" height="100px" alt="Logo UTB" style="margin: 30px 10px 0px 0px;">
+            </div>
+
+            <center><div>
+                <p class="infoUTB"><b>UNIVERSIDAD TECNICA DE BABAHOYO</b><br>Babahoyo - Ecuador<br>Teléfono: (05) 257-0368<br>Email: soporte@utb.edu.ec</p>
+            </div>
+        </div></center>
+
+        <div style="text-align: center; margin-top: 20px;">
+        &copy; Universidad Técnica de Babahoyo 2023 - 2024</div>
+</footer>
+</body>
+</html>

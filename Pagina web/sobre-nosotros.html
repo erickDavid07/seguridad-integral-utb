@@ -1,0 +1,453 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sobre nosotros</title>
+</head>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Calibri;
+}
+
+body{
+    background-color: #f0f0f0;
+}
+
+/*ENCABEZADO Y MENU*/
+header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #009D2D;
+    z-index: 1;
+}
+
+hr{
+    border-color: #03CA3C;
+
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a.ver{
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #009D2D;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+a.ver: hover{
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+}
+
+a.botoncito{
+    background-color: #009D2D;
+    padding: 13px;
+    font-size: 13px;
+    border-radius: 30px;
+}
+
+a.botoncito: hover{
+    background-color: #3C3D3C;
+    color: white;
+}
+
+/*HEADER SUPERIOR*/
+.header_superior{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+img.logoutb{
+    display: flex;
+    position: relative;
+}
+
+/*BARRA MENU*/
+.container_menu{
+    width: 100%;
+    height: 70px;
+    background: #009D2D;
+    padding: 0px 20px;
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+
+nav ul li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 28px;
+    color: white;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 14px;
+    transition: all 300ms ease;
+    border-radius: 10px;
+}
+
+#check_menu {
+    display: none;
+}
+
+/*TRANSICIONES DE MENU*/
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background:#ECECEC;
+    color: #009D2D;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*CUERPO DE LA PAGINA*/
+main{
+    background: #f0f0f0;
+    padding: 70px 300px;
+    margin-top: 80px;
+}
+
+article{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 40px;
+    background: #F6FEF6;
+    border-radius: 20px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+article.seccionuno{
+    max-width: 100%;
+    margin: 20px;
+    padding: 40px;
+    background: #F6FEF6;
+    border-radius: 20px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+article h2{
+    font-family: sans-serif;
+}
+
+article p{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: sans-serif;
+    line-height: 30px;
+}
+    
+h2{
+    font-size: 30px;
+    font-family: calibri;
+    padding: 10px;
+    font-weight: 400;
+    line-height: 38px;
+    color: #444444;
+}
+
+p{
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 0rem;
+    line-height: 1.7;
+    color: #393939;
+    text-align: justify;
+    font-display: inherit;
+    font-family: calibri;
+}
+
+.secciones-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+p.info{
+    color: white;
+}
+
+p.infoUTB{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 25px;
+}
+
+.video {
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  border-radius: 25px;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+h1{
+    font-size: 40px;
+    font-family: calibri light;
+    color: #3D3D3D;
+}
+
+i{
+    font-size: 20px;
+    font-family: calibri;
+    color: #3D3D3D;
+}
+
+/*MENU RESPONSIVE*/
+
+@media screen and (max-width: 760px) {
+    .icon_menu {
+        font-size: 26px;
+        color: white;
+        cursor: pointer;
+        display: none;
+        width: 26px;
+        height: 100%;
+        align-items: center;
+    }
+
+    header{
+        padding: 15px 20px;
+    }
+
+    #check_menu {
+        display: none;
+    }
+
+    ul {
+        flex-direction: column;
+        background-color: #009D2D;
+        position: fixed;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 0;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+    #check_menu:checked ~ ul {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        margin-top: 15px;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #label_check{
+        width: 26px;
+        height: 100%;
+        display: none;
+    }
+
+    .secciones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+    .header_superior{
+            padding: 10px;
+        }
+
+        .logo img{
+            height: 60px;
+        }
+
+        
+        nav > ul > li > a:hover{
+            transform: scale(1); /*escaladelmenu*/
+        }
+
+        nav ul li ul{
+            left: 70px; /*submenuposicion*/
+        }
+
+        nav > ul > li:hover ul{
+            top: 60px;
+        }
+
+        nav > ul > li:first-child a{
+            background-position: 20px;
+        }
+
+        #selected{
+            transform: scale(1);
+        }
+
+        #label_check{
+            display: block;
+        }
+
+        .icon_menu{
+            display: flex;
+        }
+
+        #check_menu:checked ~ nav > ul{
+            height: 300px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        main{
+            padding: 60px 30px;
+        }
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    #menu-toggle:checked + #menu-icon + ul {
+        display: flex;
+    }
+}
+</style>
+
+<body>
+    <header>
+        <div class="logo"><a href="https://utb.edu.ec/"><img src="https://i.ibb.co/ZGRFTHf/Logo-Blanco-UTB-removebg-preview.png" height="70px" class="logoutb"></a></div>
+        <nav>
+            <input type="checkbox" id="check_menu" name="menu-toggle">
+            <label for="check_menu" class="icon_menu">&#9776;</label>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+                <li><a href="cuentos.html">Cuentos</a></li>
+                <li><a href="">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="logo"><a href=""><img src="https://i.ibb.co/b2FFMDy/Whats-App-Image-2024-06-19-at-11-13-10-removebg-preview.png" height="70px" class="logoutb"></a></div>
+    </header>
+
+    <main>
+        <article>
+            <h1>Sobre nosotros</h1>
+            <p>Bienvenidos al Portal de seguridad infantil, del "Proyecto de Estrategias tecnológicas para fomentar la seguridad Integral en los niños de Educación Inicial". Nos enorgullece liderar esta iniciativa bajo la dirección de la Máster Gladys Guevara Albán, una figura destacada en el ámbito de la educación y la seguridad infantil.</p>
+            <p>Dentro de nuestro equipo multidisciplinario, contamos con la participación activa de distinguidos profesionales. Además de la Máster Gilma Tablada Martínez (Subdirectora de proyecto), estamos asociados con la Máster Gladys Verónica Ronquillo (Docente investigador).</p>
+            <p>Nuestra misión abarca dos campos fundamentales: Educación Inicial y Pedagogía de las Ciencias Experimentales en Informática, lo que nos permite ofrecer soluciones integrales y adaptadas a las necesidades contemporáneas.</p>
+            <p>Entre nuestros colaboradores se encuentran:<br>
+
+- Erick Luna Rivera: Escritor y diseñador de páginas web.<br>
+- Freddy Acosta: Programador de juegos.<br>
+- Miguel Estrella: Tecnólogo en Diseño Gráfico (videos intractivos).<br>
+- Erick Herrera: Diseñador de páginas web y videos interactivos.</p>
+<p>Además, nuestro equipo se complementa con talentosas estudiantes de la Educación Inicial:</p>
+<p>Duran Mera Saskia Lissette: Desarrollador de guia didactica<br>Gurumendi Rodríguez Genesis Antonela: Desarrollador de guia didactica</p>
+<p>Nos comprometemos a proporcionar un entorno seguro y educativo para los niños de educación inicial, guiados por los más altos estándares de calidad y profesionalismo. ¡Gracias por formar parte de nuestro proyecto!</p>
+        </article><br><br>
+
+        <!--<h1>INTEGRANTES</h1>
+
+        <article>
+            <h2>Máster Gladys Guevara Albán</h2>
+            <p>Descripcion... y foto</p>
+        </article>-->
+
+    </main>
+
+    <footer style="background-color: #333; color: white; padding: 20px;">
+        <div style="max-width: 1200px; margin: auto; text-align: center;">
+            <div style="margin-bottom: 20px;">
+                <img src="https://i.ibb.co/ZGRFTHf/Logo-Blanco-UTB-removebg-preview.png" height="100px" alt="Logo UTB" style="margin: 30px 10px 0px 0px;">
+            </div>
+
+            <center><div>
+                <p class="infoUTB"><b>UNIVERSIDAD TECNICA DE BABAHOYO</b><br>Babahoyo - Ecuador<br>Teléfono: (05) 257-0368<br>Email: soporte@utb.edu.ec</p>
+            </div>
+        </div></center>
+
+        <div style="text-align: center; margin-top: 20px;">
+        &copy; Universidad Técnica de Babahoyo 2023 - 2024</div>
+</footer>
+</body>
+</html>

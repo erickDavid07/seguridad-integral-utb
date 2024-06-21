@@ -1,0 +1,451 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Juegos</title>
+</head>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: calibri;
+}
+
+body{
+    background-color: #f0f0f0;
+}
+
+/*ENCABEZADO Y MENU*/
+header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #009D2D;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a.ver{
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #009D2D;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+a.ver: hover{
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+}
+
+/*HEADER SUPERIOR*/
+.header_superior{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+img.logoutb{
+    display: flex;
+    position: relative;
+}
+
+/*BARRA MENU*/
+.container_menu{
+    width: 100%;
+    height: 70px;
+    background: #009D2D;
+    padding: 0px 20px;
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+
+nav ul li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 28px;
+    color: white;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 14px;
+    transition: all 300ms ease;
+    border-radius: 10px;
+}
+
+#check_menu {
+    display: none;
+}
+
+/*TRANSICIONES DE MENU*/
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background:#ECECEC;
+    color: #009D2D;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*CUERPO DE LA PAGINA*/
+main{
+    background: #f0f0f0;
+    padding: 70px 230px;
+    margin-top: 60px;
+}
+
+article{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 40px;
+    background: #F6FEF6;
+    border-radius: 20px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+article.seccionuno{
+    max-width: 100%;
+    margin: 20px;
+    padding: 40px;
+    background: #F6FEF6;
+    border-radius: 20px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+article h2{
+    font-family: sans-serif;
+}
+
+article p{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: sans-serif;
+    line-height: 30px;
+}
+    
+h2{
+    font-size: 30px;
+    font-family: Times new roman;
+    padding: 10px;
+    font-weight: 400;
+    line-height: 38px;
+    color: #444444;
+}
+
+p{
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 0rem;
+    line-height: 1.7;
+    color: #393939;
+    text-align: justify;
+    font-display: inherit;
+    font-family: times new roman;
+}
+
+.secciones-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+}
+
+p.info{
+    color: white;
+}
+
+p.infoUTB{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 25px;
+}
+
+.video {
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  border-radius: 20px;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+/*MENU RESPONSIVE*/
+
+@media screen and (max-width: 760px) {
+    .icon_menu {
+        font-size: 26px;
+        color: white;
+        cursor: pointer;
+        display: none;
+        width: 26px;
+        height: 100%;
+        align-items: center;
+    }
+
+    header{
+        padding: 15px 20px;
+    }
+
+    #check_menu {
+        display: none;
+    }
+
+    ul {
+        flex-direction: column;
+        background-color: #009D2D;
+        position: fixed;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 0;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+    }
+
+    #check_menu:checked ~ ul {
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        margin-top: 15px;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #label_check{
+        width: 26px;
+        height: 100%;
+        display: none;
+    }
+
+    .secciones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+    .header_superior{
+            padding: 10px;
+        }
+
+        .logo img{
+            height: 60px;
+        }
+
+        
+        nav > ul > li > a:hover{
+            transform: scale(1); /*escaladelmenu*/
+        }
+
+        nav ul li ul{
+            left: 70px; /*submenuposicion*/
+        }
+
+        nav > ul > li:hover ul{
+            top: 60px;
+        }
+
+        nav > ul > li:first-child a{
+            background-position: 20px;
+        }
+
+        #selected{
+            transform: scale(1);
+        }
+
+        #label_check{
+            display: block;
+        }
+
+        .icon_menu{
+            display: flex;
+        }
+
+        #check_menu:checked ~ nav > ul{
+            height: 300px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        main{
+            padding: 40px 1px;
+        }
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    #menu-toggle:checked + #menu-icon + ul {
+        display: flex;
+    }
+}
+</style>
+
+<script>
+function vermes1(id){
+if(id=="mes1"){
+document.getElementById("despmes1").style.display="block";
+document.getElementById("mes1").style.display="none"; 
+}
+else{
+document.getElementById("despmes1").style.display="none";
+document.getElementById("mes1").style.display="inline";
+}
+}
+</script>
+
+<body>
+    <header>
+        <div class="logo"><a href="https://utb.edu.ec/"><img src="https://i.ibb.co/ZGRFTHf/Logo-Blanco-UTB-removebg-preview.png" height="70px" class="logoutb"></a></div>
+        <nav>
+            <input type="checkbox" id="check_menu" name="menu-toggle">
+            <label for="check_menu" class="icon_menu">&#9776;</label>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="">Juegos</a></li>
+                <li><a href="cuentos.html">Cuentos</a></li>
+                <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="logo"><a href=""><img src="https://i.ibb.co/b2FFMDy/Whats-App-Image-2024-06-19-at-11-13-10-removebg-preview.png" height="70px" class="logoutb"></a></div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!--Pronto<h2>JUNIO</h2><button onclick="vermes1('mes1');" id="mes1" class="meses">Ver devocionales de junio</button></center>
+        <scetion id="despmes1" style="display:none">-->
+            <article>
+                <div>
+                    <h2>Seguridad vial</h2>
+                    <iframe style="max-width:100%" src="https://wordwall.net/embed/272d42f1f5884831bb541324d125d90e?themeId=1&templateId=5&fontStackId=0" width="500" height="380" frameborder="0" allowfullscreen></iframe><br><br><br>
+                </div>
+                <div>
+                    <iframe style="max-width:100%" src="https://view.genially.com/66342e94ebfbaa0014a26f96" width="500" height="380" frameborder="0" allowfullscreen></iframe><br><br><br>
+                <div>
+                    <iframe style="max-width:100%" src="https://wordwall.net/es/embed/5ff668b54c2c40b196be4f4ef0510a6a?themeId=1&templateId=35&fontStackId=0" width="500" height="380" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <br><br>
+            <div>
+                <h2>Seguridad en casa</h2>
+                <iframe style="max-width:100%" src="https://wordwall.net/embed/03c91b83057545b3ba11ecded8d3c53f?themeId=1&templateId=8&fontStackId=0" width="500" height="380" frameborder="0" allowfullscreen></iframe><br><br><br>
+            </div>
+            <center><div>
+                <iframe src="https://www.tinytap.com/activities/g47ot/player/embed/" width="640" height="480" frameborder="0"></iframe>
+            </div></center>
+            <div>
+                <iframe width='640' height='480' src="https://www.tinytap.com/activities/g5l6u/player/embed/" style='border:0'>    </iframe>
+            </div><br><br>
+
+            <div>
+                    <h2>Seguridad emocional</h2>
+                    <iframe style="max-width:100%" src="https://wordwall.net/embed/9177a76d01b64184a36c9a7439095cb8?themeId=43&templateId=46&fontStackId=0" width="500" height="380" frameborder="0" allowfullscreen></iframe><br><br><br>
+                </div>
+                <div>
+                <iframe style="max-width:100%" src="https://view.genially.com/663430b40bbd3600146706d4" width="500" height="380" frameborder="0" allowfullscreen></iframe><br><br><br>
+            </div>
+
+        </article>
+        </div>
+        <!--Pronto<center><button onclick="vermes1('mesmenos1');" id="mesmenos1" class="meses">Ocultar devocionales</button></center>
+        </section>-->
+    </main>
+
+    <footer style="background-color: #333; color: white; padding: 20px;">
+        <div style="max-width: 1200px; margin: auto; text-align: center;">
+            <div style="margin-bottom: 20px;">
+                <img src="https://i.ibb.co/ZGRFTHf/Logo-Blanco-UTB-removebg-preview.png" height="100px" alt="Logo UTB" style="margin: 30px 10px 0px 0px;">
+            </div>
+
+            <center><div>
+                <center><p class="infoUTB"><b>UNIVERSIDAD TECNICA DE BABAHOYO</b><br>Babahoyo - Ecuador<br>Teléfono: (05) 257-0368<br>Email: soporte@utb.edu.ec</p></center>
+            </div>
+        </div></center>
+
+        <div style="text-align: center; margin-top: 20px;">
+        &copy; Universidad Técnica de Babahoyo 2023 - 2024</div>
+</footer>
+</body>
+</html>
